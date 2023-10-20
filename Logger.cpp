@@ -30,7 +30,7 @@ void Logger::setConf(LogConfig conf)
 
 void Logger::printline(const char* in)
 {
-  printline(in, "info");
+  printline(in, LogLevel::Info);
 }
 void Logger::printline(const char* in, const char* level)
 {
@@ -59,14 +59,14 @@ void Logger::printline(const char* in, LogLevel level)
   case Debug:
     if (loggerConf.debug)
     {
-      stream->print("DEBUG: ");
+      stream->print("Debug: ");
       stream->println(in);
     }
     break;
   case Info:
     if (loggerConf.info)
     {
-      stream->print("INFO: ");
+      stream->print("Info: ");
       stream->println(in);
     }
     break;
