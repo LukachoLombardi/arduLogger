@@ -21,9 +21,9 @@ class Logger
     static LogConfig generateConf(bool debug, bool info, bool warning, bool severe);
     void setConf(LogConfig conf);
 
-    void printline(String in);
-    void printline(String in, String level);
-    void printline(String in, LogLevel level);
+    void printline(const char* in);
+    void printline(const char* in, const char* level);
+    void printline(const char* in, LogLevel level);
 
     
   private:
