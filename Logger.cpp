@@ -12,7 +12,7 @@ Logger::Logger()
 void Logger::init(Stream *inStream)
 {
   stream = inStream;
-  stream->println("Serial Initialized");
+  stream->println("Logger: Serial Test");
 }
 Logger::LogConfig Logger::generateConf(bool debug, bool info, bool warning, bool severe)
 {
