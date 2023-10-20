@@ -1,0 +1,4 @@
+Logger	KEYWORD1
+init	KEYWORD2
+setConf	KEYWORD2
+printline	KEYWORD2
