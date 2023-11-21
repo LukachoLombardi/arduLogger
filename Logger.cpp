@@ -23,6 +23,9 @@ void Logger::setConf(LogConfig conf)
 {
   loggerConf = conf;
 }
+Logger::LogConfig Logger::getConf(){
+	return loggerConf;
+}
 
 void Logger::printline(const char* in)
 {

@@ -19,6 +19,7 @@ class Logger
 
     static LogConfig generateConf(bool debug, bool info, bool warning, bool severe);
     void setConf(LogConfig conf);
+	LogConfig getConf();
 
     void printline(const char* in);
     void printline(const char* in, const char* level);
@@ -27,7 +28,6 @@ class Logger
     
   private:
     LogConfig loggerConf;
-    Stream *stream;
 };
 
 #endif
