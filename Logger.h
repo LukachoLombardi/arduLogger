@@ -16,7 +16,6 @@ class Logger
   
     Logger(LogConfig conf);
     Logger();
-    void init(Stream *inStream);
 
     static LogConfig generateConf(bool debug, bool info, bool warning, bool severe);
     void setConf(LogConfig conf);
