@@ -4,15 +4,11 @@
 Logger::Logger(LogConfig conf)
 {
   loggerConf = conf;
+  Serial.println("Logger: Serial Test");
 }
 Logger::Logger()
 {
   loggerConf = generateConf(true, true, true, true);
-}
-void Logger::init(Stream *inStream)
-{
-  stream = inStream;
-  stream->println("Logger: Serial Test");
 }
 Logger::LogConfig Logger::generateConf(bool debug, bool info, bool warning, bool severe)
 {
@@ -59,29 +55,29 @@ void Logger::printline(const char* in, LogLevel level)
   case Debug:
     if (loggerConf.debug)
     {
-      stream->print("Debug: ");
-      stream->println(in);
+      Serial.print("Debug: ");
+      Serial.println(in);
     }
     break;
   case Info:
     if (loggerConf.info)
     {
-      stream->print("Info: ");
-      stream->println(in);
+      Serial.print("Info: ");
+      Serial.println(in);
     }
     break;
   case Warning:
     if (loggerConf.warning)
     {
-      stream->print("WARNING: ");
-      stream->println(in);
+      Serial.print("WARNING: ");
+      Serial.println(in);
     }
     break;
   case Severe:
     if (loggerConf.severe)
     {
-      stream->print("SEVERE: ");
-      stream->println(in);
+      Serial.print("SEVERE: ");
+      Serial.println(in);
     }
     break;
   }
